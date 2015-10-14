@@ -1,0 +1,10 @@
+target
+.classpath
+.project
+.settings
+*.userprefs
+packages
+src/csharp/bin
+src/csharp/obj
+src/test/csharp/bin
+src/test/csharp/obj
