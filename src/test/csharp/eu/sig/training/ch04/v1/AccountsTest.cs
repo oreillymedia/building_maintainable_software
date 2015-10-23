@@ -14,6 +14,8 @@ namespace eu.sig.training.ch04.v1
 
         // end::AccountsTest[]
 
+        // This test is meant to fail.
+        [Ignore]
         // tag::testEmptyString[]
         [Test]
         public void testEmptyString() {
@@ -22,6 +24,8 @@ namespace eu.sig.training.ch04.v1
         // end::testEmptyString[]
 
         #pragma warning disable 219
+        // This test is meant to fail, that's why we ignore it.
+        [Ignore]
         // tag::showError[]
         [Test]
         public void showError() {

@@ -6,10 +6,10 @@ import eu.sig.training.ch04.v3.CheckingAccount;
 
 // tag::Account[]
 public class Account {
-    public Transfer makeTransfer(String counterAccount, Money amount) 
+    public Transfer makeTransfer(String counterAccount, Money amount)
         throws BusinessException {
         if (isValid(counterAccount)) {
-            CheckingAccount acct = eu.sig.training.ch04.v3.Accounts.findAcctByNumber(counterAccount);
+            CheckingAccount acct = Accounts.findAcctByNumber(counterAccount);
             return new Transfer(this, acct, amount);
         } else {
             throw new BusinessException("Invalid account number!");

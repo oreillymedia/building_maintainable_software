@@ -18,9 +18,4 @@ namespace eu.sig.training.ch03.binarytree.v2 {
         }
         // end::calculateDepth[]
     }
-
-    class TreeException : Exception {
-        public TreeException(String msg) : base (msg) {
-        }
-    }
 }

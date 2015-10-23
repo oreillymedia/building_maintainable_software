@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{4A7AC26A-1772-439E-B8BC-1DD2CD83BEC3}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>maintainabilitybook</RootNamespace>
+    <AssemblyName>maintainabilitybook</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <StartupObject>eu.sig.training.ch10.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="eu\sig\training\ch04\v1\Accounts.cs" />
+    <Compile Include="eu\sig\training\ch04\v1\CheckingAccount.cs" />
+    <Compile Include="eu\sig\training\ch04\BusinessException.cs" />
+    <Compile Include="eu\sig\training\ch04\Money.cs" />
+    <Compile Include="eu\sig\training\ch04\v1\Transfer.cs" />
+    <Compile Include="eu\sig\training\ch04\v1\SavingsAccount.cs" />
+    <Compile Include="eu\sig\training\ch10\Program.cs" />
+    <Compile Include="eu\sig\training\ch02\Employees.cs" />
+    <Compile Include="eu\sig\training\ch10\PerfectPicture.cs" />
+    <Compile Include="eu\sig\training\ch02\BalancesServlet.cs" />
+    <Compile Include="eu\sig\training\ch02\BoardFactory.cs" />
+    <Compile Include="eu\sig\training\ch02\Level.cs" />
+    <Compile Include="eu\sig\training\ch02\v2\BoardFactory.cs" />
+    <Compile Include="eu\sig\training\ch02\v1\BoardFactory.cs" />
+    <Compile Include="eu\sig\training\ch02\LevelHelper.cs" />
+    <Compile Include="eu\sig\training\ch03\binarytree\BinaryTreeNode.cs" />
+    <Compile Include="eu\sig\training\ch03\binarytree\v1\BinaryTreeSearch.cs" />
+    <Compile Include="eu\sig\training\ch03\binarytree\v2\BinaryTreeSearch.cs" />
+    <Compile Include="eu\sig\training\ch03\binarytree\v3\BinaryTreeSearch.cs" />
+    <Compile Include="eu\sig\training\ch03\Flag.cs" />
+    <Compile Include="eu\sig\training\ch03\FlagFactory.cs" />
+    <Compile Include="eu\sig\training\ch03\FlagFactoryOops.cs" />
+    <Compile Include="eu\sig\training\ch03\FlagFactoryWithMap.cs" />
+    <Compile Include="eu\sig\training\ch03\JenkinsUser.cs" />
+    <Compile Include="eu\sig\training\ch03\Nationality.cs" />
+    <Compile Include="eu\sig\training\ch03\withmapandtypes\BelgianFlag.cs" />
+    <Compile Include="eu\sig\training\ch03\withmapandtypes\DefaultFlag.cs" />
+    <Compile Include="eu\sig\training\ch03\withmapandtypes\DutchFlag.cs" />
+    <Compile Include="eu\sig\training\ch03\withmapandtypes\Flag.cs" />
+    <Compile Include="eu\sig\training\ch03\withmapandtypes\FlagFactory.cs" />
+    <Compile Include="eu\sig\training\ch03\withmapandtypes\FrenchFlag.cs" />
+    <Compile Include="eu\sig\training\ch03\withmapandtypes\ItalianFlag.cs" />
+    <Compile Include="eu\sig\training\ch03\withmapandtypes\GermanFlag.cs" />
+    <Compile Include="eu\sig\training\ch04\v2\Accounts.cs" />
+    <Compile Include="eu\sig\training\ch04\v2\CheckingAccount.cs" />
+    <Compile Include="eu\sig\training\ch04\v2\SavingsAccount.cs" />
+    <Compile Include="eu\sig\training\ch04\v2\Transfer.cs" />
+    <Compile Include="eu\sig\training\ch04\v3\Account.cs" />
+    <Compile Include="eu\sig\training\ch04\v3\Accounts.cs" />
+    <Compile Include="eu\sig\training\ch04\v3\CheckingAccount.cs" />
+    <Compile Include="eu\sig\training\ch04\v3\SavingsAccount.cs" />
+    <Compile Include="eu\sig\training\ch04\v3\Transfer.cs" />
+    <Compile Include="eu\sig\training\ch04\v4\Account.cs" />
+    <Compile Include="eu\sig\training\ch04\v4\Accounts.cs" />
+    <Compile Include="eu\sig\training\ch04\v4\Transfer.cs" />
+    <Compile Include="eu\sig\training\ch05\boardpanel\v1\BoardPanel.cs" />
+    <Compile Include="eu\sig\training\ch05\boardpanel\v2\BoardPanel.cs" />
+    <Compile Include="eu\sig\training\ch05\boardpanel\v2\Rectangle.cs" />
+    <Compile Include="eu\sig\training\ch05\boardpanel\v3\BoardPanel.cs" />
+    <Compile Include="eu\sig\training\ch05\buildandsendmail\v1\BuildAndSendMail.cs" />
+    <Compile Include="eu\sig\training\ch05\buildandsendmail\v2\BuildAndSendMail.cs" />
+    <Compile Include="eu\sig\training\ch06\advanceddigitalcamera\DigitalCamera.cs" />
+    <Compile Include="eu\sig\training\ch06\advanceddigitalcamera\Video.cs" />
+    <Compile Include="eu\sig\training\ch06\digitalcamera\DigitalCamera.cs" />
+    <Compile Include="eu\sig\training\ch06\digitalcamera\SmartphoneApp.cs" />
+    <Compile Include="eu\sig\training\ch06\simpledigitalcamera\DigitalCamera.cs" />
+    <Compile Include="eu\sig\training\ch06\simpledigitalcamera\SDK.cs" />
+    <Compile Include="eu\sig\training\ch06\simpledigitalcamera\SimpleDigitalCamera.cs" />
+    <Compile Include="eu\sig\training\ch06\simpledigitalcamera\SmartphoneApp.cs" />
+    <Compile Include="eu\sig\training\ch06\userservice\NotificationType.cs" />
+    <Compile Include="eu\sig\training\ch06\userservice\splitted\UserBlockService.cs" />
+    <Compile Include="eu\sig\training\ch06\userservice\splitted\UserNotificationService.cs" />
+    <Compile Include="eu\sig\training\ch06\userservice\splitted\UserService.cs" />
+    <Compile Include="eu\sig\training\ch06\userservice\User.cs" />
+    <Compile Include="eu\sig\training\ch06\userservice\UserInfo.cs" />
+    <Compile Include="eu\sig\training\ch06\userservice\v1\UserRestAPI.cs" />
+    <Compile Include="eu\sig\training\ch06\userservice\v1\UserService.cs" />
+    <Compile Include="eu\sig\training\ch06\userservice\v2\NotificationRestAPI.cs" />
+    <Compile Include="eu\sig\training\ch06\userservice\v2\UserService.cs" />
+    <Compile Include="eu\sig\training\ch06\userservice\v3\UserService.cs" />
+    <Compile Include="eu\sig\training\ch07\ApplicationLauncher.cs" />
+    <Compile Include="eu\sig\training\ch07\ICloudServer.cs" />
+    <Compile Include="eu\sig\training\ch07\ICloudServerFactory.cs" />
+    <Compile Include="eu\sig\training\ch07\ICloudStorage.cs" />
+    <Compile Include="eu\sig\training\ch07\AzureCloudServerFactory.cs" />
+    <Compile Include="eu\sig\training\ch07\AWSCloudServerFactory.cs" />
+    <Compile Include="eu\sig\training\ch07\AWSCloudStorage.cs" />
+    <Compile Include="eu\sig\training\ch07\AWSComputeServer.cs" />
+    <Compile Include="eu\sig\training\ch07\AWSDatabaseServer.cs" />
+    <Compile Include="eu\sig\training\ch07\AzureCloudStorage.cs" />
+    <Compile Include="eu\sig\training\ch07\AzureComputeServer.cs" />
+    <Compile Include="eu\sig\training\ch07\AzureDatabaseServer.cs" />
+    <Compile Include="eu\sig\training\ch11\DeadCode.cs" />
+    <Compile Include="eu\sig\training\ch11\MagicConstants.cs" />
+    <Compile Include="eu\sig\training\ch11\StandardContext.cs" />
+    <Compile Include="eu\sig\training\ch03\binarytree\TreeException.cs" />
+    <Compile Include="eu\sig\training\ch05\chartlib\v1\Charts.cs" />
+    <Compile Include="eu\sig\training\ch05\chartlib\v2\BarChart.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="eu\sig\training\ch02\" />
+    <Folder Include="eu\sig\training\ch02\v1\" />
+    <Folder Include="eu\sig\training\ch02\v2\" />
+    <Folder Include="eu\sig\training\ch02\withmapandtypes\" />
+    <Folder Include="eu\sig\training\ch03\" />
+    <Folder Include="eu\sig\training\ch03\binarytree\" />
+    <Folder Include="eu\sig\training\ch04\" />
+    <Folder Include="eu\sig\training\ch04\v1\" />
+    <Folder Include="eu\sig\training\ch04\v2\" />
+    <Folder Include="eu\sig\training\ch04\v3\" />
+    <Folder Include="eu\sig\training\ch04\v4\" />
+    <Folder Include="eu\sig\training\ch06\" />
+    <Folder Include="eu\sig\training\ch07\" />
+    <Folder Include="eu\sig\training\ch10\" />
+    <Folder Include="eu\sig\training\ch11\" />
+    <Folder Include="eu\sig\training\ch05\boardpanel\" />
+    <Folder Include="eu\sig\training\ch05\buildandsendmail\" />
+    <Folder Include="eu\sig\training\ch06\userservice\" />
+    <Folder Include="eu\sig\training\ch05\chartlib\" />
+    <Folder Include="eu\sig\training\ch05\chartlib\v1\" />
+    <Folder Include="eu\sig\training\ch05\chartlib\v2\" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <DotNetNamingPolicy DirectoryNamespaceAssociation="Hierarchical" ResourceNamePolicy="FileFormatDefault" />
+        </Policies>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+</Project>

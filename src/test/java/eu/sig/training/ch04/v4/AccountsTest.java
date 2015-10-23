@@ -1,4 +1,4 @@
-package eu.sig.training.ch04.v2;
+package eu.sig.training.ch04.v4;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;

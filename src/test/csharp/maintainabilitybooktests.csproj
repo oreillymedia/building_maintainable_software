@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2CFE25EC-4B1A-4F22-9829-F3070E26A3E9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>maintainabilitybooktests</RootNamespace>
+    <AssemblyName>maintainabilitybooktests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <UnitTestInformation>
+      <UnitTestInformation />
+    </UnitTestInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq">
+      <HintPath>..\..\..\packages\Moq.4.2.1507.0118\lib\net40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="eu\sig\training\ch04\v1\AccountsTest.cs" />
+    <Compile Include="eu\sig\training\ch10\PerfectPictureTest.cs" />
+    <Compile Include="eu\sig\training\ch10\PerfectPictureMockTest.cs" />
+    <Compile Include="eu\sig\training\ch03\FlagsTest.cs" />
+    <Compile Include="eu\sig\training\ch03\FlagFactoryWithMapTest.cs" />
+    <Compile Include="eu\sig\training\ch03\binarytree\BinaryTreeSearchTest.cs" />
+    <Compile Include="eu\sig\training\ch04\v4\AccountsTest.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <DotNetNamingPolicy DirectoryNamespaceAssociation="Hierarchical" ResourceNamePolicy="FileFormatDefault" />
+        </Policies>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup>
+    <ProjectReference Include="..\..\csharp\maintainabilitybook.csproj">
+      <Project>{4A7AC26A-1772-439E-B8BC-1DD2CD83BEC3}</Project>
+      <Name>maintainabilitybook</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="eu\sig\training\ch04\v1\" />
+    <Folder Include="eu\sig\training\ch10\" />
+    <Folder Include="eu\sig\training\ch03\" />
+    <Folder Include="eu\sig\training\ch03\binarytree\" />
+    <Folder Include="eu\sig\training\ch04\v4\" />
+  </ItemGroup>
+</Project>
