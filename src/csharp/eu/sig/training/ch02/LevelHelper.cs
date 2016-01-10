@@ -1,44 +1,44 @@
 ﻿using System;
 
 namespace eu.sig.training.ch02 {
-	
-	public class LevelHelper {
-		private bool inProgress;
 
-		// tag::firstStepStart[]
-		public void start() {
-			if (inProgress) {
-				return;
-			}
-			inProgress = true;
-		}
-		// end::firstStepStart[]
-	}
+    public class LevelHelper {
+        private bool inProgress;
 
-	public class ExtractMethod {
-		private bool inProgress;
+        // tag::firstStepStart[]
+        public void Start() {
+            if (inProgress) {
+                return;
+            }
+            inProgress = true;
+        }
+        // end::firstStepStart[]
+    }
 
-		// tag::extractMethodStart[]
-		public void start() {
-			if (inProgress) {
-				return;
-			}
-			inProgress = true;
-			updateObservers();
-		}
-		// end::extractMethodStart[]
+    public class ExtractMethod {
+        private bool inProgress;
 
-		// tag::updateObservers[]
-		public void updateObservers() {
-			updateObserversPlayerDied();
-			updateObserversPelletsEaten();
-		}
-		// end::updateObservers[]
+        // tag::extractMethodStart[]
+        public void Start() {
+            if (inProgress) {
+                return;
+            }
+            inProgress = true;
+            UpdateObservers();
+        }
+        // end::extractMethodStart[]
 
-		private void updateObserversPlayerDied() {}
+        // tag::updateObservers[]
+        public void UpdateObservers() {
+            UpdateObserversPlayerDied();
+            UpdateObserversPelletsEaten();
+        }
+        // end::updateObservers[]
 
-		private void updateObserversPelletsEaten() {}
-	
-	}
+        private void UpdateObserversPlayerDied() {}
+
+        private void UpdateObserversPelletsEaten() {}
+
+    }
 
 }

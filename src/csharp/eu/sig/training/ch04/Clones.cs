@@ -7,38 +7,38 @@ namespace eu.sig.training.ch04 {
         private float pageWidthInCm;
 
         // tag::one-six-line-clone[]
-        public void setGivenName(string givenName) {
+        public void SetGivenName(string givenName) {
             this.givenName = givenName;
         }
 
-        public void setFamilyName(string familyName) {
+        public void SetFamilyName(string familyName) {
             this.familyName = familyName;
         }
         // end::one-six-line-clone[]
 
-        public string getGivenName() {
+        public string GetGivenName() {
             return givenName;
         }
 
-        public string getFamilyName() {
+        public string GetFamilyName() {
             return familyName;
         }
 
         // tag::type-2-clone[]
-        public void setPageWidthInInches(float newWidth) {
+        public void SetPageWidthInInches(float newWidth) {
             float cmPerInch = 2.54f;
             this.pageWidthInCm = newWidth * cmPerInch;
             // A few more lines.
         }
 
-        public void setPageWidthInPoints(float newWidth) {
+        public void SetPageWidthInPoints(float newWidth) {
             float cmPerPoint = 0.0352777f;
             this.pageWidthInCm = newWidth * cmPerPoint;
             // A few more lines (same as in setPageWidthInInches).
         }
         // end::type-2-clone[]
 
-        public float getPageWidthInCm() {
+        public float GetPageWidthInCm() {
             return pageWidthInCm;
         }
     }

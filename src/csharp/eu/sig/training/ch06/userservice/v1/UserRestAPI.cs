@@ -12,16 +12,16 @@ namespace eu.sig.training.ch06.userservice.v1 {
 
         // ...
         // end::UserRestAPI[]
-        public string toJson(User u) {
+        public string ToJson(User u) {
             return "";
         }
         // tag::UserRestAPI[]
 
         [OperationContract]
         [WebGet(UriTemplate = "/{userId}", ResponseFormat = WebMessageFormat.Json)]
-        public string getUser(string userId) {
-            User user = userService.loadUser(userId);
-            return toJson(user);
+        public string GetUser(string userId) {
+            User user = userService.LoadUser(userId);
+            return ToJson(user);
         }
     }
     // end::UserRestAPI[]

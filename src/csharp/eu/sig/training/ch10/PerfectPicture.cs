@@ -1,22 +1,22 @@
-﻿using System;
+using System;
 using System.Drawing;
 using eu.sig.training.ch06.simpledigitalcamera;
 
 namespace eu.sig.training.ch10 {
     public class PerfectPicture {
-        public static SimpleDigitalCamera camera = null;
+        public static ISimpleDigitalCamera camera = null;
 
         // tag::takePerfectPicture[]
         public const int DAYLIGHT_START = 6;
 
-        public Image takePerfectPicture(int currentHour) {
+        public Image TakePerfectPicture(int currentHour) {
             Image image;
             if (currentHour < PerfectPicture.DAYLIGHT_START) {
-                camera.flashLightOn();
-                image = camera.takeSnapshot();
-                camera.flashLightOff();
+                camera.FlashLightOn();
+                image = camera.TakeSnapshot();
+                camera.FlashLightOff();
             } else {
-                image = camera.takeSnapshot();
+                image = camera.TakeSnapshot();
             }
             return image;
         }

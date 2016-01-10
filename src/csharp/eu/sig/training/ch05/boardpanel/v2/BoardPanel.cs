@@ -9,21 +9,21 @@ namespace eu.sig.training.ch05.boardpanel.v2
         /// <summary>
         /// Renders a single square on the given graphics context on the specified
         /// rectangle.
-        ///  
+        ///
         /// <param name="square">The square to render.</param>
         /// <param name="g">The graphics context to draw on.</param>
         /// <param name="r">The position and dimension for rendering the square.</param>
-        private void render(Square square, Graphics g, Rectangle r) {
+        private void Render(Square square, Graphics g, Rectangle r) {
             Point position = r.Position;
-            square.Sprite.draw(g, position.X, position.Y, r.Width, r.Height);
+            square.Sprite.Draw(g, position.X, position.Y, r.Width, r.Height);
             foreach (Unit unit in square.Occupants) {
-                unit.Sprite.draw(g, position.X, position.Y, r.Width, r.Height);
+                unit.Sprite.Draw(g, position.X, position.Y, r.Width, r.Height);
             }
         }
         // end::render[]
 
         private class Sprite {
-            public void draw(Graphics g, int x, int y, int w, int h) {
+            public void Draw(Graphics g, int x, int y, int w, int h) {
 
             }
         }

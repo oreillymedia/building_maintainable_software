@@ -11,9 +11,5 @@ namespace eu.sig.training.ch04.v1 {
 
         public Transfer(SavingsAccount acct1, CheckingAccount acct2, Money m) {
         }
-
-        public CheckingAccount getCounterAccount() {
-            return this.CounterAccount;
-        }
     }
 }

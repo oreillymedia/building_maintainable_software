@@ -4,19 +4,19 @@ namespace eu.sig.training.ch06.digitalcamera {
 
     // tag::DigitalCamera[]
     public class DigitalCamera {
-        public Image takeSnapshot() {
+        public Image TakeSnapshot() {
             // ...
             // end::DigitalCamera[]
             return Image.FromFile("");
             // tag::DigitalCamera[]
         }
 
-        public void flashLightOn() {
-            // ... 
+        public void FlashLightOn() {
+            // ...
         }
 
-        public void flaslLightOff() {
-            // ... 
+        public void FlashLightOff() {
+            // ...
         }
     }
     // end::DigitalCamera[]

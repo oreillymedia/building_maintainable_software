@@ -38,8 +38,8 @@ public class PluginManager {
 
             pluginUploaded = true;
 
-            // Now create a dummy plugin that we can dynamically load (the InstallationJob 
-            // will force a restart if one is needed):
+            // Now create a dummy plugin that we can dynamically load
+            // (the InstallationJob will force a restart if one is needed):
             JSONObject cfg = new JSONObject().element("name", baseName)
                 .element("version", "0"). // unused but mandatory
                 element("url", t.toURI().toString())

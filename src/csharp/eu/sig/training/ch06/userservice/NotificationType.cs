@@ -1,7 +1,7 @@
 namespace eu.sig.training.ch06.userservice {
 
     public class NotificationType {
-        public static NotificationType fromString(string type) {
+        public static NotificationType FromString(string type) {
             return new NotificationType();
         }
     }

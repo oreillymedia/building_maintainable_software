@@ -3,15 +3,15 @@
 namespace eu.sig.training.ch07 {
     // tag::AWSCloudServerFactory[]
     public class AWSCloudServerFactory : ICloudServerFactory {
-        public ICloudServer launchComputeServer() {
+        public ICloudServer LaunchComputeServer() {
             return new AWSComputeServer();
         }
 
-        public ICloudServer launchDatabaseServer() {
+        public ICloudServer LaunchDatabaseServer() {
             return new AWSDatabaseServer();
         }
 
-        public ICloudStorage createCloudStorage(long sizeGb) {
+        public ICloudStorage CreateCloudStorage(long sizeGb) {
             return new AWSCloudStorage(sizeGb);
         }
     }

@@ -19,9 +19,9 @@ public class BoardPanel {
      * @param y
      *            The y position to start drawing.
      * @param w
-     *            The width of this square (in pixels.)
+     *            The width of this square (in pixels).
      * @param h
-     *            The height of this square (in pixels.)
+     *            The height of this square (in pixels).
      */
     private void render(Square square, Graphics g, int x, int y, int w, int h) {
         square.getSprite().draw(g, x, y, w, h);

@@ -3,11 +3,11 @@
 namespace eu.sig.training.ch07 {
     // tag::CloudServerFactory[]
     public interface ICloudServerFactory {
-        ICloudServer launchComputeServer();
+        ICloudServer LaunchComputeServer();
 
-        ICloudServer launchDatabaseServer();
+        ICloudServer LaunchDatabaseServer();
 
-        ICloudStorage createCloudStorage(long sizeGb);
+        ICloudStorage CreateCloudStorage(long sizeGb);
     }
     // end::CloudServerFactory[]
 }

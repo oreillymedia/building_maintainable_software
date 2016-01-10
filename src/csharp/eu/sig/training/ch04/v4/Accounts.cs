@@ -4,12 +4,12 @@ using eu.sig.training.ch04.v3;
 namespace eu.sig.training.ch04.v4 {
    
     public static class Accounts {
-        public static CheckingAccount findAcctByNumber(string number) {
+        public static CheckingAccount FindAcctByNumber(string number) {
             return new CheckingAccount();
         }
 
         // Version that should make tests succeed (not used in book):
-        public static bool isValid(string number) {
+        public static bool IsValid(string number) {
             if (number.Length != 9) {
                 return false;
             }

@@ -68,7 +68,7 @@
         <version>2.18.1</version>
         <configuration>
           <excludes>
-            <exclude>**/AccountsTest.java</exclude>
+            <exclude>**/v1/AccountsTest.java</exclude>
           </excludes>
         </configuration>
       </plugin>

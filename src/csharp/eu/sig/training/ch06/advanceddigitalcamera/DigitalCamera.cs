@@ -4,45 +4,45 @@ namespace eu.sig.training.ch06.advanceddigitalcamera {
 
     // tag::DigitalCamera[]
     public class DigitalCamera {
-        public Image takeSnapshot() {
+        public Image TakeSnapshot() {
             // ...
             // end::DigitalCamera[]
             return Image.FromFile("");
             // tag::DigitalCamera[]
         }
 
-        public void flashLightOn() {
-            // ... 
+        public void FlashLightOn() {
+            // ...
         }
 
-        public void flaslLightOff() {
-            // ... 
+        public void FlaslLightOff() {
+            // ...
         }
 
-        public Image takePanoramaSnapshot() {
+        public Image TakePanoramaSnapshot() {
             // end::DigitalCamera[]
             return Image.FromFile("");
             // tag::DigitalCamera[]
-            // ... 
+            // ...
         }
 
-        public Video record() {
+        public Video Record() {
             // ...
             // end::DigitalCamera[]
             return new Video();
             // tag::DigitalCamera[]
         }
 
-        public void setTimer(int seconds) {
-            // ... 
-        }
-
-        public void zoomIn() {
+        public void SetTimer(int seconds) {
             // ...
         }
 
-        public void zoomOut() {
-            // ... 
+        public void ZoomIn() {
+            // ...
+        }
+
+        public void ZoomOut() {
+            // ...
         }
     }
     // end::DigitalCamera[]

@@ -3,12 +3,12 @@
 namespace eu.sig.training.ch04.v1 {
     public static class Accounts {
 
-        public static CheckingAccount findAcctByNumber(string number) {
+        public static CheckingAccount FindAcctByNumber(string number) {
             return new CheckingAccount();
         }
 
         // tag::isValid[]
-        public static bool isValid(string number) {
+        public static bool IsValid(string number) {
             int sum = 0;
             for (int i = 0; i < number.Length; i++) {
                 sum = sum + (9 - i) * (int)Char.GetNumericValue(number[i]);

@@ -9,7 +9,6 @@ public class LevelHelper {
             return;
         }
         inProgress = true;
-
     }
     // end::firstStepStart[]
 }

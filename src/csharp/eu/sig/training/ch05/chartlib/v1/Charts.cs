@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Drawing;
 using Rectangle = eu.sig.training.ch05.boardpanel.v2.Rectangle;
 
 namespace eu.sig.training.ch05.chartlib.v1 {
     public class Charts {
         // tag::drawBarChart[]
-        public static void drawBarChart(Graphics g,
+        public static void DrawBarChart(Graphics g,
             CategoryItemRendererState state,
             Rectangle graphArea,
             CategoryPlot plot,
@@ -17,8 +17,8 @@ namespace eu.sig.training.ch05.chartlib.v1 {
         // end::drawBarChart[]
 
         // tag::drawBarChartDefault[]
-        public static void drawBarChart(Graphics g, CategoryDataset dataset) {
-            Charts.drawBarChart(g,
+        public static void DrawBarChart(Graphics g, CategoryDataset dataset) {
+            Charts.DrawBarChart(g,
                 CategoryItemRendererState.DEFAULT,
                 new Rectangle(new Point(0, 0), 100, 100),
                 CategoryPlot.DEFAULT,

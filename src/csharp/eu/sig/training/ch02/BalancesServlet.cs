@@ -8,36 +8,36 @@ namespace eu.sig.training.ch02
 {
     public class BalancesServlet {
         // tag::doGet[]
-        public void doGet(HttpRequest req, HttpResponse resp) {
+        public void DoGet(HttpRequest req, HttpResponse resp) {
             resp.ContentType = "application/json";
-			string command = "SELECT account, balance " +
-				"FROM ACCTS WHERE id=" + req.Params[
-					ConfigurationManager.AppSettings["request.parametername"]];
-			SqlDataAdapter dataAdapter = new SqlDataAdapter(command, 
-				ConfigurationManager.AppSettings["handler.serverstring"]);
-			DataSet dataSet = new DataSet();
-			dataAdapter.Fill(dataSet, "ACCTS");
-			DataTable dataTable = dataSet.Tables[0];
-			try {
+            string command = "SELECT account, balance " +
+                "FROM ACCTS WHERE id=" + req.Params[
+                    ConfigurationManager.AppSettings["request.parametername"]];
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command,
+                ConfigurationManager.AppSettings["handler.serverstring"]);
+            DataSet dataSet = new DataSet();
+            dataAdapter.Fill(dataSet, "ACCTS");
+            DataTable dataTable = dataSet.Tables[0];
+            try {
                 float totalBalance = 0;
-				int rowNum = 0;
+                int rowNum = 0;
                 resp.Write("{\"balances\":[");
-				while (dataTable.Rows.GetEnumerator().MoveNext()) {
-					rowNum++;
-					DataRow results = (DataRow)dataTable.Rows.GetEnumerator().Current;
+                while (dataTable.Rows.GetEnumerator().MoveNext()) {
+                    rowNum++;
+                    DataRow results = (DataRow)dataTable.Rows.GetEnumerator().Current;
                     // Assuming result is 9-digit bank account number,
                     // validate with 11-test:
                     int sum = 0;
-					for (int i = 0; i < ((string)results["account"]).Length; i++) {
+                    for (int i = 0; i < ((string)results["account"]).Length; i++) {
                         sum = sum + (9 - i) *
-							(int)Char.GetNumericValue(((string)results["account"])[i]);
+                            (int)Char.GetNumericValue(((string)results["account"])[i]);
                     }
                     if (sum % 11 == 0) {
-						totalBalance += (float)results["balance"];
-						resp.Write("{\"" + results["account"] + "\":"
-							+ results["balance"] + "}");
+                        totalBalance += (float)results["balance"];
+                        resp.Write("{\"" + results["account"] + "\":"
+                            + results["balance"] + "}");
                     }
-					if (rowNum == dataTable.Rows.Count) {
+                    if (rowNum == dataTable.Rows.Count) {
                         resp.Write("],\n");
                     } else {
                         resp.Write(",");

@@ -8,14 +8,14 @@ namespace eu.sig.training.ch10 {
     public class PerfectPictureMoqTest {
         // tag::testNightPictureMockito[]
         [Test]
-        public void testNightPictureMoq() {
+        public void TestNightPictureMoq() {
             Image image =
                 Image.FromFile("../../../../test/resources/VanGoghStarryNight.jpg");
-            var cameraMock = new Mock<SimpleDigitalCamera>();
-            cameraMock.Setup(foo => foo.takeSnapshot()).Returns(image);
+            var cameraMock = new Mock<ISimpleDigitalCamera>();
+            cameraMock.Setup(foo => foo.TakeSnapshot()).Returns(image);
             PerfectPicture.camera = cameraMock.Object;
-            Assert.AreSame(image, new PerfectPicture().takePerfectPicture(0));
-            cameraMock.Verify(foo => foo.flashLightOn(), Times.AtMostOnce());
+            Assert.AreSame(image, new PerfectPicture().TakePerfectPicture(0));
+            cameraMock.Verify(foo => foo.FlashLightOn(), Times.AtMostOnce());
         }
         // end::testNightPictureMockito[]
     }

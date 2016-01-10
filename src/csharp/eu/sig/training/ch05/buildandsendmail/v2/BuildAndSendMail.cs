@@ -4,12 +4,12 @@ namespace eu.sig.training.ch05.buildandsendmail.v2
     public class BuildAndSendMail {
 
         // tag::buildAndSendMail[]
-        public void buildAndSendMail(MailMan m, MailAddress mAddress,
+        public void DoBuildAndSendMail(MailMan m, MailAddress mAddress,
             MailBody mBody) {
             // Build the mail
             Mail mail = new Mail(mAddress, mBody);
             // Send the mail
-            m.sendMail(mail);
+            m.SendMail(mail);
         }
 
         public class Mail {
@@ -44,13 +44,13 @@ namespace eu.sig.training.ch05.buildandsendmail.v2
         }
         // end::buildAndSendMail[]
 
-        public MailMessage formatMessage(MailFont font, string s) {
+        public MailMessage FormatMessage(MailFont font, string s) {
             return null;
         }
 
         public class MailMan {
-            public void send(string mId, string subject, MailMessage mMessage) {}
-            public void sendMail(Mail mail) {}
+            public void Send(string mId, string subject, MailMessage mMessage) {}
+            public void SendMail(Mail mail) {}
         }
 
         public class MailFont {}

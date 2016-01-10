@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 namespace eu.sig.training.ch02 {
-	
+
     public class Level {
         private bool inProgress;
         private readonly IList<LevelObserver> observers;
@@ -11,48 +11,48 @@ namespace eu.sig.training.ch02 {
         }
 
         // tag::start[]
-        public void start() {
+        public void Start() {
             if (inProgress) {
                 return;
             }
             inProgress = true;
             // Update observers if player died:
-            if (!isAnyPlayerAlive()) {
+            if (!IsAnyPlayerAlive()) {
                 foreach (LevelObserver o in observers) {
-                    o.levelLost();
+                    o.LevelLost();
                 }
             }
             // Update observers if all pellets eaten:
-            if (remainingPellets() == 0) {
+            if (RemainingPellets() == 0) {
                 foreach (LevelObserver o in observers) {
-                    o.levelWon();
+                    o.LevelWon();
                 }
             }
         }
         // end::start[]
 
         // tag::updateObservers[]
-        private void updateObservers() {
+        private void UpdateObservers() {
             // Update observers if player died:
-            if (!isAnyPlayerAlive()) {
+            if (!IsAnyPlayerAlive()) {
                 foreach (LevelObserver o in observers) {
-                    o.levelLost();
+                    o.LevelLost();
                 }
             }
             // Update observers if all pellets eaten:
-            if (remainingPellets() == 0) {
+            if (RemainingPellets() == 0) {
                 foreach (LevelObserver o in observers) {
-                    o.levelWon();
+                    o.LevelWon();
                 }
             }
         }
         // end::updateObservers[]
 
         // tag::updateObserversPlayerDied[]
-        private void updateObserversPlayerDied() {
-            if (!isAnyPlayerAlive()) {
+        private void UpdateObserversPlayerDied() {
+            if (!IsAnyPlayerAlive()) {
                 foreach (LevelObserver o in observers) {
-                    o.levelLost();
+                    o.LevelLost();
                 }
             }
         }
@@ -60,27 +60,27 @@ namespace eu.sig.training.ch02 {
         // end::updateObserversPlayerDied[]
 
         // tag::updateObserversPelletsEaten[]
-        private void updateObserversPelletsEaten() {
-            if (remainingPellets() == 0) {
+        private void UpdateObserversPelletsEaten() {
+            if (RemainingPellets() == 0) {
                 foreach (LevelObserver o in observers) {
-                    o.levelWon();
+                    o.LevelWon();
                 }
             }
         }
         // end::updateObserversPelletsEaten[]
 
-        private int remainingPellets() {
+        private int RemainingPellets() {
             return 0;
         }
 
-        private bool isAnyPlayerAlive() {
+        private bool IsAnyPlayerAlive() {
             return false;
         }
     }
 
     class LevelObserver {
-        public void levelLost() {}
-        public void levelWon() {}
+        public void LevelLost() {}
+        public void LevelWon() {}
     }
 
 }

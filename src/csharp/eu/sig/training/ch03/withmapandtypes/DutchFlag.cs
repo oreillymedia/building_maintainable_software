@@ -4,11 +4,12 @@ using System.Drawing;
 namespace eu.sig.training.ch03.withmapandtypes {
 
     // tag::DutchFlag[]
-    public class DutchFlag : Flag {
-        public IList<Color> getColors() {
-            return new List<Color>{ Color.Red, Color.White, Color.Red };
+    public class DutchFlag : IFlag {
+        public IList<Color> Colors {
+            get {
+                return new List<Color>{ Color.Red, Color.White, Color.Blue };
+            }
         }
     }
     // end::DutchFlag[]
-
 }

@@ -3,35 +3,35 @@ using eu.sig.training.ch03.binarytree;
 
 namespace eu.sig.training.ch03.binarytree.v3 {
 
-	public class BinaryTreeSearch {
+    public class BinaryTreeSearch {
 
-		// tag::calculateDepth[]
-		public static int calculateDepth(BinaryTreeNode<int> t, int n) {
-			int depth = 0;
-			if (t.getValue() == n)
-				return depth;
-			else
-				return traverseByValue(t, n);
-		}
+        // tag::calculateDepth[]
+        public static int CalculateDepth(BinaryTreeNode<int> t, int n) {
+            int depth = 0;
+            if (t.Value == n) {
+                return depth;
+            } else {
+                return TraverseByValue(t, n);
+            }
+        }
 
-		private static int traverseByValue(BinaryTreeNode<int> t, int n) {
-			BinaryTreeNode<int> childNode = getChildNode(t, n);
-			if (childNode == null) {
-				throw new TreeException ("Value not found in tree!");
-			} else {
-				return 1 + calculateDepth(childNode, n);
-			}
-		}
+        private static int TraverseByValue(BinaryTreeNode<int> t, int n) {
+            BinaryTreeNode<int> childNode = GetChildNode(t, n);
+            if (childNode == null) {
+                throw new TreeException("Value not found in tree!");
+            } else {
+                return 1 + CalculateDepth(childNode, n);
+            }
+        }
 
-		private static BinaryTreeNode<int> getChildNode(
-			BinaryTreeNode<int> t, int n) {
-			if (n < t.getValue()) {
-				return t.getLeft();
-			} else {
-				return t.getRight();
-			}
-		}
-		// end::calculateDepth[]
-
-	}
+        private static BinaryTreeNode<int> GetChildNode(
+            BinaryTreeNode<int> t, int n) {
+            if (n < t.Value) {
+                return t.Left;
+            } else {
+                return t.Right;
+            }
+        }
+        // end::calculateDepth[]
+    }
 }

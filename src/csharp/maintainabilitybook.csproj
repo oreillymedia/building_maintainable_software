@@ -71,7 +71,7 @@
     <Compile Include="eu\sig\training\ch03\withmapandtypes\BelgianFlag.cs" />
     <Compile Include="eu\sig\training\ch03\withmapandtypes\DefaultFlag.cs" />
     <Compile Include="eu\sig\training\ch03\withmapandtypes\DutchFlag.cs" />
-    <Compile Include="eu\sig\training\ch03\withmapandtypes\Flag.cs" />
+    <Compile Include="eu\sig\training\ch03\withmapandtypes\IFlag.cs" />
     <Compile Include="eu\sig\training\ch03\withmapandtypes\FlagFactory.cs" />
     <Compile Include="eu\sig\training\ch03\withmapandtypes\FrenchFlag.cs" />
     <Compile Include="eu\sig\training\ch03\withmapandtypes\ItalianFlag.cs" />
@@ -100,7 +100,6 @@
     <Compile Include="eu\sig\training\ch06\digitalcamera\SmartphoneApp.cs" />
     <Compile Include="eu\sig\training\ch06\simpledigitalcamera\DigitalCamera.cs" />
     <Compile Include="eu\sig\training\ch06\simpledigitalcamera\SDK.cs" />
-    <Compile Include="eu\sig\training\ch06\simpledigitalcamera\SimpleDigitalCamera.cs" />
     <Compile Include="eu\sig\training\ch06\simpledigitalcamera\SmartphoneApp.cs" />
     <Compile Include="eu\sig\training\ch06\userservice\NotificationType.cs" />
     <Compile Include="eu\sig\training\ch06\userservice\splitted\UserBlockService.cs" />
@@ -131,6 +130,7 @@
     <Compile Include="eu\sig\training\ch03\binarytree\TreeException.cs" />
     <Compile Include="eu\sig\training\ch05\chartlib\v1\Charts.cs" />
     <Compile Include="eu\sig\training\ch05\chartlib\v2\BarChart.cs" />
+    <Compile Include="eu\sig\training\ch06\simpledigitalcamera\ISimpleDigitalCamera.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

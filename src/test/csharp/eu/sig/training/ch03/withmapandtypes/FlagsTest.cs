@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace eu.sig.training.ch03 {
+namespace eu.sig.training.ch03.withmapandtypes {
     [TestFixture]
-    public class FlagFactoryWithMapTest {
+    public class FlagsTest {
 
         [Test]
-        public void TestGetFlagColors() {
-            FlagFactoryWithMap factory = new FlagFactoryWithMap();
+        public void TestGetFlag() {
+            FlagFactory factory = new FlagFactory();
 
             IList<Color> colors = factory.GetFlagColors(Nationality.DUTCH);
 

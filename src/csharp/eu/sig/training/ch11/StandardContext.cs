@@ -4,20 +4,20 @@ namespace eu.sig.training.ch11 {
     public class StandardContext {
 
         // tag::validateFilterMap[]
-        private void validateFilterMap(FilterMap filterMap) {
+        private void ValidateFilterMap(FilterMap filterMap) {
             // Validate the proposed filter mapping
-            string filterName = filterMap.getFilterName();
-            string[] servletNames = filterMap.getServletNames();
-            string[] urlPatterns = filterMap.getURLPatterns();
-            if (findFilterDef(filterName) == null)
+            string filterName = filterMap.GetFilterName();
+            string[] servletNames = filterMap.GetServletNames();
+            string[] urlPatterns = filterMap.GetURLPatterns();
+            if (FindFilterDef(filterName) == null)
                 throw new Exception(
-                    sm.getString("standardContext.filterMap.name", filterName));
+                    sm.GetString("standardContext.filterMap.name", filterName));
 
-            if (!filterMap.getMatchAllServletNames() &&
-                !filterMap.getMatchAllUrlPatterns() &&
+            if (!filterMap.GetMatchAllServletNames() &&
+                !filterMap.GetMatchAllUrlPatterns() &&
                 (servletNames.Length == 0) && (urlPatterns.Length == 0))
                 throw new Exception(
-                    sm.getString("standardContext.filterMap.either"));
+                    sm.GetString("standardContext.filterMap.either"));
             // FIXME: Older spec revisions may still check this
             /*
             if ((servletNames.length != 0) && (urlPatterns.length != 0))
@@ -25,9 +25,9 @@ namespace eu.sig.training.ch11 {
                     (sm.getString("standardContext.filterMap.either"));
             */
             for (int i = 0; i < urlPatterns.Length; i++) {
-                if (!validateURLPattern(urlPatterns[i])) {
+                if (!ValidateURLPattern(urlPatterns[i])) {
                     throw new Exception(
-                        sm.getString("standardContext.filterMap.pattern",
+                        sm.GetString("standardContext.filterMap.pattern",
                             urlPatterns[i]));
                 }
             }
@@ -35,11 +35,11 @@ namespace eu.sig.training.ch11 {
         // end::validateFilterMap[]
 
         public class GetStringObject {
-            public string getString(string s) {
+            public string GetString(string s) {
                 return s;
             }
 
-            public string getString(string s, object o) {
+            public string GetString(string s, object o) {
                 return s;
             }
         }
@@ -48,33 +48,33 @@ namespace eu.sig.training.ch11 {
 
         public class FilterMap {
 
-            public bool getMatchAllUrlPatterns() {
+            public bool GetMatchAllUrlPatterns() {
                 return false;
             }
 
-            public string[] getURLPatterns() {
+            public string[] GetURLPatterns() {
                 return null;
             }
 
-            public string[] getServletNames() {
+            public string[] GetServletNames() {
                 return null;
             }
 
-            public string getFilterName() {
+            public string GetFilterName() {
                 return null;
             }
 
-            public bool getMatchAllServletNames() {
+            public bool GetMatchAllServletNames() {
                 return false;
             }
 
         }
 
-        private bool validateURLPattern(string s) {
+        private bool ValidateURLPattern(string s) {
             return false;
         }
 
-        private object findFilterDef(string filterName) {
+        private object FindFilterDef(string filterName) {
             return null;
         }
     }

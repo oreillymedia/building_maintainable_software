@@ -6,15 +6,18 @@ namespace eu.sig.training.ch03.binarytree.v2 {
     public class BinaryTreeSearch {
 
         // tag::calculateDepth[]
-        public static int calculateDepth(BinaryTreeNode<int> t, int n) {
+        public static int CalculateDepth(BinaryTreeNode<int> t, int n) {
             int depth = 0;
-            if (t.getValue () == n)
+            if (t.Value == n) {
                 return depth;
-            if (n < t.getValue () && t.getLeft () != null)
-                return 1 + calculateDepth (t.getLeft (), n);
-            if (n > t.getValue () && t.getRight () != null)
-                return 1 + calculateDepth (t.getRight (), n);
-            throw new TreeException ("Value not found in tree!");
+            }
+            if ((n < t.Value) && (t.Left != null)) {
+                return 1 + CalculateDepth(t.Left, n);
+            }
+            if ((n > t.Value) && (t.Right != null)) {
+                return 1 + CalculateDepth(t.Right, n);
+            }
+            throw new TreeException("Value not found in tree!");
         }
         // end::calculateDepth[]
     }

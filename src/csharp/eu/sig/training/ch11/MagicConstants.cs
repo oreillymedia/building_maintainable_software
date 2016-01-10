@@ -15,7 +15,7 @@ namespace eu.sig.training.ch11 {
         public class UseMagicConstants {
 
             // tag::calculateFareMagicConstants[]
-            float calculateFare(Customer c, long distance) {
+            float CalculateFare(Customer c, long distance) {
                 float travelledDistanceFare = distance * 0.10f;
                 if (c.Age < 12) {
                     travelledDistanceFare *= 0.25f;
@@ -38,7 +38,7 @@ namespace eu.sig.training.ch11 {
             private static readonly int MAXIMUM_AGE_CHILDREN = 12;
             private static readonly int MINIMUM_AGE_ELDERLY = 65;
 
-            float calculateFare(Customer c, long distance) {
+            float CalculateFare(Customer c, long distance) {
                 float travelledDistanceFare = distance * FARE_PER_KM;
                 if (c.Age < MAXIMUM_AGE_CHILDREN) {
                     travelledDistanceFare *= DISCOUNT_RATE_CHILDREN;

@@ -9,7 +9,7 @@ namespace eu.sig.training.ch10 {
                 Console.WriteLine("Type a bank account number on the next line.");
                 acct = Console.ReadLine();
                 Console.WriteLine("Bank account number '" + acct + "' is" +
-                (Accounts.isValid(acct) ? "" : " not") + " valid.");
+                (Accounts.IsValid(acct) ? "" : " not") + " valid.");
             } while (!String.IsNullOrEmpty(acct));
         }
     }

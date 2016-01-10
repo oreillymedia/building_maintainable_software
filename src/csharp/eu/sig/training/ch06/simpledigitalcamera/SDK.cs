@@ -1,7 +1,7 @@
 namespace eu.sig.training.ch06.simpledigitalcamera {
 
     public class SDK {
-        public static SimpleDigitalCamera getCamera() {
+        public static ISimpleDigitalCamera GetCamera() {
             return new DigitalCamera();
         }
     }

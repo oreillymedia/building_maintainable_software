@@ -4,7 +4,7 @@ namespace eu.sig.training.ch02
 {
     public class BoardFactory {
         // tag::createBoard[]
-        public Board createBoard(Square[,] grid) {
+        public Board CreateBoard(Square[,] grid) {
             Debug.Assert(grid != null);
 
             Board board = new Board(grid);
@@ -18,7 +18,7 @@ namespace eu.sig.training.ch02
                         int dirX = (width + x + dir.DeltaX) % width;
                         int dirY = (height + y + dir.DeltaY) % height;
                         Square neighbour = grid[dirX,dirY];
-                        square.link(neighbour, dir);
+                        square.Link(neighbour, dir);
                     }
                 }
             }
@@ -37,7 +37,7 @@ namespace eu.sig.training.ch02
     }
 
     public class Square {
-        public void link(Square neighbour, Direction dir) {}
+        public void Link(Square neighbour, Direction dir) {}
     }
 
     public class Direction

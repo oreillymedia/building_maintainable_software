@@ -12,11 +12,10 @@ namespace eu.sig.training.ch07 {
             } else {
                 factory = new AWSCloudServerFactory();
             }
-            ICloudServer computeServer = factory.launchComputeServer();
-            ICloudServer databaseServer = factory.launchDatabaseServer();
+            ICloudServer computeServer = factory.LaunchComputeServer();
+            ICloudServer databaseServer = factory.LaunchDatabaseServer();
             // end::ApplicationLauncher[]
         }
         #pragma warning restore 219
     }
 }
-    

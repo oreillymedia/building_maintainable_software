@@ -3,16 +3,11 @@ using System.Collections.Generic;
 
 namespace eu.sig.training.ch03 {
 
-	public class Flag {
-		private readonly IList<Color> colors;
+    public class Flag {
+        public IList<Color> Colors { get; }
 
-		public Flag (params Color[] colors) {
-			this.colors = new List<Color>(colors);
-		}
-
-		public IList<Color> getColors() {
-			return colors;
-		}
-	}
-
+        public Flag (params Color[] colors) {
+            Colors = new List<Color>(colors);
+        }
+    }
 }

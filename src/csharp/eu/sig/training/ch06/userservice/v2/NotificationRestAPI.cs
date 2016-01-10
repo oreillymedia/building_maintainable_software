@@ -12,23 +12,23 @@ namespace eu.sig.training.ch06.userservice.v2 {
 
         // ...
         // end::NotificationRestAPI[]
-        public string toJson(int status) {
+        public string ToJson(int status) {
             return "";
         }
         // tag::NotificationRestAPI[]
 
         [OperationContract]
         [WebGet(UriTemplate = "/register/{userId}/{type}")]
-        public void register(string userId, string notificationType) {
-            User user = userService.loadUser(userId);
-            userService.registerForNotifications(user, NotificationType.fromString(notificationType));
+        public void Register(string userId, string notificationType) {
+            User user = userService.LoadUser(userId);
+            userService.RegisterForNotifications(user, NotificationType.FromString(notificationType));
         }
 
         [OperationContract]
         [WebInvoke(Method = "POST", UriTemplate = "/unregister/{userId}/{type}")]
-        public void unregister(string userId, string notificationType) {
-            User user = userService.loadUser(userId);
-            userService.unregisterForNotifications(user, NotificationType.fromString(notificationType));
+        public void Unregister(string userId, string notificationType) {
+            User user = userService.LoadUser(userId);
+            userService.UnregisterForNotifications(user, NotificationType.FromString(notificationType));
         }
     }
     // end::NotificationRestAPI[]

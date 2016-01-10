@@ -3,10 +3,10 @@ using System.Drawing;
 
 namespace eu.sig.training.ch03 {
     public class FlagFactoryOops {
-        public IList<Color> getFlagColors(Nationality nationality) {
+        public IList<Color> GetFlagColors(Nationality nationality) {
             List<Color> result;
             switch (nationality) {
-            // tag::getFlag[]    
+            // tag::getFlag[]
             case Nationality.DUTCH:
                 result = new List<Color>{ Color.Red, Color.White, Color.Blue };
                 // end::getFlag[]
@@ -16,7 +16,7 @@ namespace eu.sig.training.ch03 {
                 result = new List<Color>{ Color.Red, Color.White, Color.LightBlue };
                 break;
             case Nationality.GERMAN:
-            // end::getFlag[]        
+            // end::getFlag[]
                 result = new List<Color>{ Color.Black, Color.Red, Color.Yellow };
                 break;
             case Nationality.BELGIAN:

@@ -7,28 +7,28 @@ namespace eu.sig.training.ch04.v1
     public class AccountsTest
     {
         [Test]
-        public void testIsValidNormalCases() {
-            Assert.IsTrue(Accounts.isValid("123456789"));
-            Assert.IsFalse(Accounts.isValid("123456788"));
+        public void TestIsValidNormalCases() {
+            Assert.IsTrue(Accounts.IsValid("123456789"));
+            Assert.IsFalse(Accounts.IsValid("123456788"));
         }
 
         // end::AccountsTest[]
 
         // This test is meant to fail.
-        [Ignore]
+        [Ignore("Deliberately fails for illustration purpose")]
         // tag::testEmptyString[]
         [Test]
-        public void testEmptyString() {
-            Assert.IsFalse(Accounts.isValid(""));
+        public void TestEmptyString() {
+            Assert.IsFalse(Accounts.IsValid(""));
         }
         // end::testEmptyString[]
 
         #pragma warning disable 219
         // This test is meant to fail, that's why we ignore it.
-        [Ignore]
+        [Ignore("Deliberately fails for illustration purpose")]
         // tag::showError[]
         [Test]
-        public void showError() {
+        public void ShowError() {
             int tmp = 0, dummy = 1 / tmp;
             // Next line is never executed because the previous one raises an
             // exception.

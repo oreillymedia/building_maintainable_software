@@ -20,7 +20,8 @@ public class SavingsAccount {
             CheckingAccount acct = Accounts.findAcctByNumber(counterAccount);
             Transfer result = new Transfer(this, acct, amount); // <2>
             // 3. Check whether withdrawal is to registered counter account:
-            if (result.getCounterAccount().equals(this.registeredCounterAccount)) {
+            if (result.getCounterAccount().equals(this.registeredCounterAccount)) 
+            {
                 return result;
             } else {
                 throw new BusinessException("Counter-account not registered!");

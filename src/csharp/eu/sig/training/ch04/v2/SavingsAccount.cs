@@ -6,13 +6,13 @@ namespace eu.sig.training.ch04.v2 {
     public class SavingsAccount {
         public CheckingAccount RegisteredCounterAccount { get; set; }
 
-        public Transfer makeTransfer(string counterAccount, Money amount) {
+        public Transfer MakeTransfer(string counterAccount, Money amount) {
             // 1. Assuming result is 9-digit bank account number, validate with 11-test:
-            if (Accounts.isValid(counterAccount)) { // <1>
+            if (Accounts.IsValid(counterAccount)) { // <1>
                 // 2. Look up counter account and make transfer object:
-                CheckingAccount acct = Accounts.findAcctByNumber(counterAccount);
+                CheckingAccount acct = Accounts.FindAcctByNumber(counterAccount);
                 Transfer result = new Transfer(this, acct, amount); // <2>
-                if (result.getCounterAccount().Equals(this.RegisteredCounterAccount)) {
+                if (result.CounterAccount.Equals(this.RegisteredCounterAccount)) {
                     return result;
                 } else {
                     throw new BusinessException("Counter-account not registered!");
@@ -21,8 +21,6 @@ namespace eu.sig.training.ch04.v2 {
                 throw new BusinessException("Invalid account number!!");
             }
         }
-
     }
     // end::SavingsAccount[]
-
 }

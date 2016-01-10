@@ -5,7 +5,7 @@ namespace eu.sig.training.ch04.v3 {
 
     // tag::Account[]
     public class Account {
-        public Transfer makeTransfer(string counterAccount, Money amount) {
+        public virtual Transfer MakeTransfer(string counterAccount, Money amount) {
             // 1. Assuming result is 9-digit bank account number, validate 11-test:
             int sum = 0; // <1>
             for (int i = 0; i < counterAccount.Length; i++) {
@@ -14,7 +14,7 @@ namespace eu.sig.training.ch04.v3 {
             }
             if (sum % 11 == 0) {
                 // 2. Look up counter account and make transfer object:
-                CheckingAccount acct = Accounts.findAcctByNumber(counterAccount);
+                CheckingAccount acct = Accounts.FindAcctByNumber(counterAccount);
                 Transfer result = new Transfer(this, acct, amount); // <2>
                 return result;
             } else {

@@ -5,54 +5,54 @@ namespace eu.sig.training.ch06.userservice.v3 {
 
     // tag::UserService[]
     public class UserService {
-        public User loadUser(string userId) {
+        public User LoadUser(string userId) {
             // ...
             // end::UserService[]
             return new User();
             // tag::UserService[]
         }
 
-        public bool doesUserExist(string userId) {
+        public bool DoesUserExist(string userId) {
             // ...
             // end::UserService[]
             return true;
             // tag::UserService[]
         }
 
-        public User changeUserInfo(UserInfo userInfo) {
+        public User ChangeUserInfo(UserInfo userInfo) {
             // ...
             // end::UserService[]
             return new User();
             // tag::UserService[]
         }
 
-        public List<NotificationType> getNotificationTypes(User user) {
+        public List<NotificationType> GetNotificationTypes(User user) {
             // ...
             // end::UserService[]
             return new List<NotificationType>();
             // tag::UserService[]
         }
 
-        public void registerForNotifications(User user, NotificationType type) {
+        public void RegisterForNotifications(User user, NotificationType type) {
             // ...
         }
 
-        public void unregisterForNotifications(User user, NotificationType type) {
+        public void UnregisterForNotifications(User user, NotificationType type) {
             // ...
         }
 
-        public List<User> searchUsers(UserInfo userInfo) {
+        public List<User> SearchUsers(UserInfo userInfo) {
             // ...
             // end::UserService[]
             return new List<User>();
             // tag::UserService[]
         }
 
-        public void blockUser(User user) {
-            // ... 
+        public void BlockUser(User user) {
+            // ...
         }
 
-        public List<User> getAllBlockedUsers() {
+        public List<User> GetAllBlockedUsers() {
             // ...
             // end::UserService[]
             return new List<User>();

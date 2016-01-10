@@ -7,17 +7,17 @@ namespace eu.sig.training.ch11 {
         }
 
         // tag::getTransaction[]
-        public Transaction getTransaction(long uid) {
+        public Transaction GetTransaction(long uid) {
             Transaction result = new Transaction(uid);
             if (result != null) {
                 return result;
             } else {
-                return lookupTransaction(uid); // <1>
+                return LookupTransaction(uid); // <1>
             }
         }
         // end::getTransaction[]
 
-        private Transaction lookupTransaction(long uid) {
+        private Transaction LookupTransaction(long uid) {
             return null;
         }
     }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 using Rectangle = eu.sig.training.ch05.boardpanel.v2.Rectangle;
@@ -13,16 +13,16 @@ namespace eu.sig.training.ch05.chartlib.v2 {
         private ValueAxis rangeAxis = ValueAxis.DEFAULT;
         private CategoryDataset dataset = CategoryDataset.DEFAULT;
 
-        public BarChart draw(Graphics g) {
+        public BarChart Draw(Graphics g) {
             // ..
             return this;
         }
 
-        public ValueAxis getRangeAxis() {
+        public ValueAxis GetRangeAxis() {
             return rangeAxis;
         }
 
-        public BarChart setRangeAxis(ValueAxis rangeAxis) {
+        public BarChart SetRangeAxis(ValueAxis rangeAxis) {
             this.rangeAxis = rangeAxis;
             return this;
         }
@@ -31,7 +31,7 @@ namespace eu.sig.training.ch05.chartlib.v2 {
 
         // end::BarChart[]
 
-        public CategoryItemRendererState getState() {
+        public CategoryItemRendererState GetState() {
             return state;
         }
 
@@ -71,7 +71,7 @@ namespace eu.sig.training.ch05.chartlib.v2 {
             return dataset;
         }
 
-        public BarChart setDataset(CategoryDataset dataset) {
+        public BarChart SetDataset(CategoryDataset dataset) {
             this.dataset = dataset;
             return this;
         }
@@ -103,12 +103,12 @@ namespace eu.sig.training.ch05.chartlib.v2 {
         CategoryDataset myDataset = null;
         #pragma warning disable 219
         // tag::showMyBarChart[]
-        private void showMyBarChart() {
+        private void ShowMyBarChart() {
             Graphics g = this.CreateGraphics();
             BarChart b = new BarChart()
-                .setRangeAxis(myValueAxis)
-                .setDataset(myDataset)
-                .draw(g);
+                .SetRangeAxis(myValueAxis)
+                .SetDataset(myDataset)
+                .Draw(g);
         }
         // end::showMyBarChart[]
         #pragma warning restore 219

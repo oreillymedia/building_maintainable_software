@@ -15,8 +15,8 @@ public class JenkinsUser {
     /**
      * Retrieve a user by its ID, and create a new one if requested.
      * @return
-     *      An existing or created user. May be {@code null} if a user does not exist and
-     *      {@code create} is false.
+     *      An existing or created user. May be {@code null} if
+     *      a user does not exist and {@code create} is false.
      */
     private static User getOrCreate(String id, String fullName,
         boolean create) {
@@ -47,7 +47,8 @@ public class JenkinsUser {
                                 if (!legacyUserDir
                                     .renameTo(configFile.getParentFile())) {
                                     LOGGER.log(Level.WARNING,
-                                        "Failed to migrate user record from {0} to {1}",
+                                        "Failed to migrate user record " +
+                                        "from {0} to {1}",
                                         new Object[] {legacyUserDir,
                                             configFile.getParentFile()});
                                 }
@@ -78,7 +79,7 @@ public class JenkinsUser {
                 byNameLock.readLock().unlock();
             }
             if (prev != null) {
-                u = prev; // if some has already put a value in the map, use it
+                u = prev; // if someone has already put a value in the map, use it
                 if (LOGGER.isLoggable(Level.FINE)
                     && !fullName.equals(prev.getFullName())) {
                     LOGGER.log(Level.FINE,

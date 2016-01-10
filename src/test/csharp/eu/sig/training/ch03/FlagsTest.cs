@@ -11,7 +11,7 @@ namespace eu.sig.training.ch03 {
         public void testGetFlag() {
             FlagFactory factory = new FlagFactory();
 
-            IList<Color> colors = factory.getFlagColors(Nationality.DUTCH);
+            IList<Color> colors = factory.GetFlagColors(Nationality.DUTCH);
 
             Assert.AreEqual(Color.Red, colors[0]);
             Assert.AreEqual(Color.White, colors[1]);

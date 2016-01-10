@@ -2,15 +2,17 @@ using System.Drawing;
 
 namespace eu.sig.training.ch06.simpledigitalcamera {
 
+    #pragma warning disable 219
     // tag::SmartphoneApp[]
     public class SmartphoneApp {
-        private static SimpleDigitalCamera camera = SDK.getCamera();
+        private static ISimpleDigitalCamera camera = SDK.GetCamera();
 
-        public static void main(string[] args) {
+        public static void Main(string[] args) {
             // ...
-            Image image = camera.takeSnapshot();
+            Image image = camera.TakeSnapshot();
             // ...
         }
     }
     // end::SmartphoneApp[]
+    #pragma warning restore 219
 }

@@ -1,19 +1,19 @@
 using System.Drawing;
 
 namespace eu.sig.training.ch06.simpledigitalcamera {
-   
+
     // tag::DigitalCamera[]
-    public class DigitalCamera : SimpleDigitalCamera {
+    public class DigitalCamera : ISimpleDigitalCamera {
         // ...
         // end::DigitalCamera[]
-        public Image takeSnapshot() {
+        public Image TakeSnapshot() {
             return null;
         }
 
-        public void flashLightOn() {
+        public void FlashLightOn() {
         }
 
-        public void flashLightOff() {
+        public void FlashLightOff() {
         }
         // tag::DigitalCamera[]
     }

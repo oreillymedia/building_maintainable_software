@@ -6,34 +6,34 @@ namespace eu.sig.training.ch04.v4 {
     public class AccountsTest {
 
         [Test]
-        public void testIsValidNormalCases() {
-            Assert.IsTrue(Accounts.isValid("123456789"));
-            Assert.IsFalse(Accounts.isValid("123456788"));
+        public void TestIsValidNormalCases() {
+            Assert.IsTrue(Accounts.IsValid("123456789"));
+            Assert.IsFalse(Accounts.IsValid("123456788"));
         }
 
         [Test]
-        public void testIsValidLetters() {
-            Assert.IsFalse(Accounts.isValid("ABCDEFGHK"));
+        public void TestIsValidLetters() {
+            Assert.IsFalse(Accounts.IsValid("ABCDEFGHK"));
         }
 
         [Test]
-        public void testIsValidNonNormal() {
-            Assert.IsFalse(Accounts.isValid(""));
+        public void TestIsValidNonNormal() {
+            Assert.IsFalse(Accounts.IsValid(""));
         }
 
         [Test]
-        public void testIsValidNonNumeric() {
-            Assert.IsFalse(Accounts.isValid("12.34.56."));
+        public void TestIsValidNonNumeric() {
+            Assert.IsFalse(Accounts.IsValid("12.34.56."));
         }
 
         [Test]
-        public void testIsValidToolong() {
-            Assert.IsFalse(Accounts.isValid("1234567890"));
+        public void TestIsValidToolong() {
+            Assert.IsFalse(Accounts.IsValid("1234567890"));
         }
 
         [Test]
-        public void testIsValidTooshort() {
-            Assert.IsFalse(Accounts.isValid("12345677"));
+        public void TestIsValidTooshort() {
+            Assert.IsFalse(Accounts.IsValid("12345677"));
         }
     }
 }

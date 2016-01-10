@@ -8,7 +8,8 @@ import eu.sig.training.ch04.v1.Accounts;
 
 public class Program {
     public static void main(String[] args) throws IOException {
-        BufferedReader isr = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader isr = 
+            new BufferedReader(new InputStreamReader(System.in));
         String acct;
         do {
             System.out.println("Type a bank account number on the next line.");

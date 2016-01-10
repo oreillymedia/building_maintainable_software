@@ -4,6 +4,7 @@ package eu.sig.training.ch04.v1;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class AccountsTest {
@@ -16,6 +17,7 @@ public class AccountsTest {
 
     // end::AccountsTest[]
 
+    @Ignore("Deliberately fails for illustration purpose")
     // tag::testEmptyString[]
     @Test
     public void testEmptyString() {
@@ -24,6 +26,7 @@ public class AccountsTest {
     // end::testEmptyString[]
 
     @SuppressWarnings("unused")
+    @Ignore("Deliberately fails for illustration purpose")
     // tag::showError[]
     @Test
     public void showError() {
