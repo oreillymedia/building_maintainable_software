@@ -4,7 +4,7 @@ Building Maintainable Software
 This is the example code that accompanies _Building Maintainable Software: Ten Guidelines for Future-Proof Code_ by Joost Visser.
 
 There are currently two editions of _Building Maintainable Software_:
-- The Java edition (ISBN: 9781491940662), available for free [here](https://www.sig.eu/10codeguidelines) for a limited amount of time and after that from O'Reilly Media.
+- The Java edition (ISBN print: 978-1-4919-5352-5, ISBN eBook: 978-1-4919-5348-8), available [at the O'Reilly webshop](http://shop.oreilly.com/product/0636920049159.do) and [at Amazon](http://www.amazon.com/Building-Maintainable-Software-Java-Edition-ebook/dp/B01B6WS86I).
 - The C# edition, currently submitted as a manuscript to O'Reilly Media.
 
 [Training videos](http://oreil.ly/1OVw1PM) are also available via O'Reilly Media.
