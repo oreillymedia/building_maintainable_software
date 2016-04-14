@@ -1,6 +1,8 @@
-namespace eu.sig.training.ch06.advanceddigitalcamera {
+namespace eu.sig.training.ch06.advanceddigitalcamera
+{
 
-    public class Video {
+    public class Video
+    {
     }
 
 }

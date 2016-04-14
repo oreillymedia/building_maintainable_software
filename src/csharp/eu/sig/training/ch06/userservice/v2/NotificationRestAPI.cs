@@ -1,34 +1,31 @@
-using System.ServiceModel;
-using System.ServiceModel.Web;
-
-using eu.sig.training.ch06.userservice;
-
-namespace eu.sig.training.ch06.userservice.v2 {
+namespace eu.sig.training.ch06.userservice.v2
+{
 
     // tag::NotificationRestAPI[]
-    [ServiceContract]
-    public class NotificationRestAPI {
+    public class NotificationController : System.Web.Http.ApiController
+    {
         private readonly UserService userService = new UserService();
 
         // ...
-        // end::NotificationRestAPI[]
-        public string ToJson(int status) {
-            return "";
-        }
-        // tag::NotificationRestAPI[]
 
-        [OperationContract]
-        [WebGet(UriTemplate = "/register/{userId}/{type}")]
-        public void Register(string userId, string notificationType) {
-            User user = userService.LoadUser(userId);
-            userService.RegisterForNotifications(user, NotificationType.FromString(notificationType));
+        public System.Web.Http.IHttpActionResult Register(string id,
+            string notificationType)
+        {
+            User user = userService.LoadUser(id);
+            userService.RegisterForNotifications(user,
+                NotificationType.FromString(notificationType));
+            return Ok();
         }
 
-        [OperationContract]
-        [WebInvoke(Method = "POST", UriTemplate = "/unregister/{userId}/{type}")]
-        public void Unregister(string userId, string notificationType) {
-            User user = userService.LoadUser(userId);
-            userService.UnregisterForNotifications(user, NotificationType.FromString(notificationType));
+        [System.Web.Http.HttpPost]
+        [System.Web.Http.ActionName("unregister")]
+        public System.Web.Http.IHttpActionResult Unregister(string id,
+            string notificationType)
+        {
+            User user = userService.LoadUser(id);
+            userService.UnregisterForNotifications(user,
+                NotificationType.FromString(notificationType));
+            return Ok();
         }
     }
     // end::NotificationRestAPI[]

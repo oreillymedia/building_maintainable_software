@@ -1,12 +1,15 @@
 ﻿using System;
 using NUnit.Framework;
 
-namespace eu.sig.training.ch03.binarytree {
+namespace eu.sig.training.ch03.binarytree
+{
     [TestFixture]
-    public class BinaryTreeSearchTest {
+    public class BinaryTreeSearchTest
+    {
 
         [Test]
-        public void testSimpleTree() {
+        public void testSimpleTree()
+        {
             BinaryTreeNode<Int32> root = new BinaryTreeNode<Int32>(5);
             root.Insert(3);
             root.Insert(10);
@@ -18,7 +21,8 @@ namespace eu.sig.training.ch03.binarytree {
         }
 
         [Test]
-        public void testDepth0() {
+        public void testDepth0()
+        {
             BinaryTreeNode<Int32> root = new BinaryTreeNode<Int32>(2);
             root.Insert(5);
             root.Insert(1);
@@ -30,7 +34,8 @@ namespace eu.sig.training.ch03.binarytree {
         }
 
         [Test]
-        public void testNotInTree() {
+        public void testNotInTree()
+        {
             BinaryTreeNode<Int32> root = new BinaryTreeNode<Int32>(2);
             root.Insert(5);
             root.Insert(1);
@@ -39,28 +44,37 @@ namespace eu.sig.training.ch03.binarytree {
             bool exceptionCaught_v2 = false;
             bool exceptionCaught_v3 = false;
 
-            #pragma warning disable 168
-            try {
+#pragma warning disable 168
+            try
+            {
                 Assert.AreEqual(eu.sig.training.ch03.binarytree.v1.BinaryTreeSearch.CalculateDepth(root, 17), 0);
-            } catch (TreeException e) {
+            }
+            catch (TreeException e)
+            {
                 exceptionCaught_v1 = true;
             }
-            try {
+            try
+            {
                 Assert.AreEqual(eu.sig.training.ch03.binarytree.v2.BinaryTreeSearch
                     .CalculateDepth(root, 17), 0);
-            } catch (TreeException e) {
+            }
+            catch (TreeException e)
+            {
                 exceptionCaught_v2 = true;
             }
-            try {
+            try
+            {
                 Assert.AreEqual(eu.sig.training.ch03.binarytree.v3.BinaryTreeSearch
                     .CalculateDepth(root, 17), 0);
-            } catch (TreeException e) {
+            }
+            catch (TreeException e)
+            {
                 exceptionCaught_v3 = true;
             }
             Assert.IsTrue(exceptionCaught_v1);
             Assert.IsTrue(exceptionCaught_v2);
             Assert.IsTrue(exceptionCaught_v3);
-            #pragma warning restore 168
+#pragma warning restore 168
         }
     }
 }

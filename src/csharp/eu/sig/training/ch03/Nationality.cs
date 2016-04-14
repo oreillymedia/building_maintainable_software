@@ -1,6 +1,8 @@
-namespace eu.sig.training.ch03 {
+namespace eu.sig.training.ch03
+{
 
-    public enum Nationality {
+    public enum Nationality
+    {
         DUTCH,
         GERMAN,
         BELGIAN,

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -21,6 +21,7 @@
     <UnitTestInformation>
       <UnitTestInformation />
     </UnitTestInformation>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -29,6 +30,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -51,6 +53,7 @@
     <Compile Include="eu\sig\training\ch03\withmapandtypes\FlagsTest.cs" />
     <Compile Include="eu\sig\training\ch04\v3\CheckingAccountTest.cs" />
     <Compile Include="eu\sig\training\ch04\v3\SavingsAccountTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -72,12 +75,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="eu\sig\training\ch04\v1\" />
-    <Folder Include="eu\sig\training\ch10\" />
-    <Folder Include="eu\sig\training\ch03\" />
-    <Folder Include="eu\sig\training\ch03\binarytree\" />
-    <Folder Include="eu\sig\training\ch04\v4\" />
-    <Folder Include="eu\sig\training\ch03\withmapandtypes\" />
-    <Folder Include="eu\sig\training\ch04\v3\" />
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
 </Project>

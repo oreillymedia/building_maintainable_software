@@ -1,8 +1,8 @@
-﻿using System;
-
-namespace eu.sig.training.ch07 {
+﻿namespace eu.sig.training.ch07
+{
     // tag::CloudServerFactory[]
-    public interface ICloudServerFactory {
+    public interface ICloudServerFactory
+    {
         ICloudServer LaunchComputeServer();
 
         ICloudServer LaunchDatabaseServer();

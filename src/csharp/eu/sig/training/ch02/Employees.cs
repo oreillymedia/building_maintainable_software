@@ -2,9 +2,11 @@ using System;
 
 namespace eu.sig.training.ch02
 {
-    public static class Employees {
+    public static class Employees
+    {
         // tag::printDepartmentEmployees[]
-        public static void PrintDepartmentEmployees(string department) {
+        public static void PrintDepartmentEmployees(string department)
+        {
             Query q = new Query();
             foreach (Employee e in q.AddColumn("FamilyName")
                 .AddColumn("Initials")
@@ -13,36 +15,43 @@ namespace eu.sig.training.ch02
                 .AddColumn("ZIPcode")
                 .AddColumn("City")
                 .AddTable("EMPLOYEES")
-                .AddWhere("EmployeeDep='" + department + "'")
-                .Execute()) {
-                Console.WriteLine("<div name='addressDiv'" + e.FamilyName
-                    + ", " + e.Initials + "<br />" + e.AddressLine1
-                    + "<br />" + e.ZipCode + e.City + "</div>");
+                .AddWhere($"EmployeeDep='{department}'")
+                .Execute())
+            {
+                Console.WriteLine($@"<div name='addressDiv'>
+                    {e.FamilyName}, {e.Initials}<br />" +
+                    "{e.AddressLine1}<br />{e.ZipCode}{e.City}</div>");
             }
         }
         // end::printDepartmentEmployees[]
     }
 
-    class Query {
+    class Query
+    {
 
-        public Query AddColumn(string s) {
+        public Query AddColumn(string s)
+        {
             return null;
         }
 
-        public Employee[] Execute() {
+        public Employee[] Execute()
+        {
             return null;
         }
 
-        public Query AddWhere(string s) {
+        public Query AddWhere(string s)
+        {
             return null;
         }
 
-        public Query AddTable(string s) {
+        public Query AddTable(string s)
+        {
             return null;
         }
     }
 
-    class Employee {
+    class Employee
+    {
 
         public string FamilyName { get; set; }
 

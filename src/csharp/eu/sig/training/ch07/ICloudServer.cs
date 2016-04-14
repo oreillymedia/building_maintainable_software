@@ -1,6 +1,6 @@
-﻿using System;
-
-namespace eu.sig.training.ch07 {
-    public interface ICloudServer {
+﻿namespace eu.sig.training.ch07
+{
+    public interface ICloudServer
+    {
     }
 }

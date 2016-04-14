@@ -1,17 +1,20 @@
 ﻿using NUnit.Framework;
-using System;
 using System.Drawing;
 using eu.sig.training.ch06.simpledigitalcamera;
 
-namespace eu.sig.training.ch10 {
+namespace eu.sig.training.ch10
+{
 
     [TestFixture]
-    public class PerfectPictureTest {
+    public class PerfectPictureTest
+    {
 
         // tag::testDayPicture[]
         [Test]
-        public void TestDayPicture() {
-            Image image = Image.FromFile("../../../../test/resources/VanGoghSunflowers.jpg");
+        public void TestDayPicture()
+        {
+            Image image =
+                Image.FromFile("../../../../test/resources/VanGoghSunflowers.jpg");
             DigitalCameraStub cameraStub = new DigitalCameraStub();
             cameraStub.TestImage = image;
             PerfectPicture.camera = cameraStub;
@@ -21,8 +24,10 @@ namespace eu.sig.training.ch10 {
 
         // tag::testNightPicture[]
         [Test]
-        public void TestNightPicture() {
-            Image image = Image.FromFile("../../../../test/resources/VanGoghStarryNight.jpg");
+        public void TestNightPicture()
+        {
+            Image image =
+                Image.FromFile("../../../../test/resources/VanGoghStarryNight.jpg");
             DigitalCameraMock cameraMock = new DigitalCameraMock();
             cameraMock.TestImage = image;
             PerfectPicture.camera = cameraMock;
@@ -34,35 +39,43 @@ namespace eu.sig.training.ch10 {
     }
 
     // tag::DigitalCameraStub[]
-    class DigitalCameraStub : ISimpleDigitalCamera {
+    class DigitalCameraStub : ISimpleDigitalCamera
+    {
         public Image TestImage;
 
-        public Image TakeSnapshot() {
+        public Image TakeSnapshot()
+        {
             return this.TestImage;
         }
 
-        public void FlashLightOn() {
+        public void FlashLightOn()
+        {
         }
 
-        public void FlashLightOff() {
+        public void FlashLightOff()
+        {
         }
     }
     // end::DigitalCameraStub[]
 
     // tag::DigitalCameraMock[]
-    class DigitalCameraMock : ISimpleDigitalCamera {
+    class DigitalCameraMock : ISimpleDigitalCamera
+    {
         public Image TestImage;
         public int FlashOnCounter = 0;
 
-        public Image TakeSnapshot() {
+        public Image TakeSnapshot()
+        {
             return this.TestImage;
         }
 
-        public void FlashLightOn() {
+        public void FlashLightOn()
+        {
             this.FlashOnCounter++;
         }
 
-        public void FlashLightOff() {
+        public void FlashLightOff()
+        {
         }
     }
     // end::DigitalCameraMock[]

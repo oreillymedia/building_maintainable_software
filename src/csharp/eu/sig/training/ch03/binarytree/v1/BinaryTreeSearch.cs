@@ -1,28 +1,40 @@
-using System;
-using eu.sig.training.ch03.binarytree;
+namespace eu.sig.training.ch03.binarytree.v1
+{
 
-namespace eu.sig.training.ch03.binarytree.v1 {
-
-    public class BinaryTreeSearch {
+    public class BinaryTreeSearch
+    {
 
         // tag::calculateDepth[]
-        public static int CalculateDepth(BinaryTreeNode<int> t, int n) {
+        public static int CalculateDepth(BinaryTreeNode<int> t, int n)
+        {
             int depth = 0;
-            if (t.Value == n) {
+            if (t.Value == n)
+            {
                 return depth;
-            } else {
-                if (n < t.Value) {
+            }
+            else
+            {
+                if (n < t.Value)
+                {
                     BinaryTreeNode<int> left = t.Left;
-                    if (left == null) {
+                    if (left == null)
+                    {
                         throw new TreeException("Value not found in tree!");
-                    } else {
+                    }
+                    else
+                    {
                         return 1 + CalculateDepth(left, n);
                     }
-                } else {
+                }
+                else
+                {
                     BinaryTreeNode<int> right = t.Right;
-                    if (right == null) {
+                    if (right == null)
+                    {
                         throw new TreeException("Value not found in tree!");
-                    } else {
+                    }
+                    else
+                    {
                         return 1 + CalculateDepth(right, n);
                     }
                 }

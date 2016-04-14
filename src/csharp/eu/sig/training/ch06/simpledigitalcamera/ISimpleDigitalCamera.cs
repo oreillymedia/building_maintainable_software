@@ -1,9 +1,11 @@
 using System.Drawing;
 
-namespace eu.sig.training.ch06.simpledigitalcamera {
+namespace eu.sig.training.ch06.simpledigitalcamera
+{
 
     // tag::SimpleDigitalCamera[]
-    public interface ISimpleDigitalCamera {
+    public interface ISimpleDigitalCamera
+    {
         Image TakeSnapshot();
 
         void FlashLightOn();

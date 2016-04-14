@@ -1,29 +1,23 @@
-using System.ServiceModel;
-using System.ServiceModel.Web;
-using eu.sig.training.ch06.userservice;
-
-namespace eu.sig.training.ch06.userservice.v1 {
+namespace eu.sig.training.ch06.userservice.v1
+{
 
     // tag::UserRestAPI[]
-    [ServiceContract]
-    public class UserRestAPI {
+    public class UserController : System.Web.Http.ApiController
+    {
 
         private readonly UserService userService = new UserService();
 
         // ...
-        // end::UserRestAPI[]
-        public string ToJson(User u) {
-            return "";
-        }
-        // tag::UserRestAPI[]
 
-        [OperationContract]
-        [WebGet(UriTemplate = "/{userId}", ResponseFormat = WebMessageFormat.Json)]
-        public string GetUser(string userId) {
-            User user = userService.LoadUser(userId);
-            return ToJson(user);
+        public System.Web.Http.IHttpActionResult GetUserById(string id)
+        {
+            User user = userService.LoadUser(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return Ok(user);
         }
     }
     // end::UserRestAPI[]
-
 }

@@ -1,13 +1,15 @@
-﻿using System;
+﻿namespace eu.sig.training.ch02
+{
 
-namespace eu.sig.training.ch02 {
-
-    public class LevelHelper {
+    public class LevelHelper
+    {
         private bool inProgress;
 
         // tag::firstStepStart[]
-        public void Start() {
-            if (inProgress) {
+        public void Start()
+        {
+            if (inProgress)
+            {
                 return;
             }
             inProgress = true;
@@ -15,12 +17,15 @@ namespace eu.sig.training.ch02 {
         // end::firstStepStart[]
     }
 
-    public class ExtractMethod {
+    public class ExtractMethod
+    {
         private bool inProgress;
 
         // tag::extractMethodStart[]
-        public void Start() {
-            if (inProgress) {
+        public void Start()
+        {
+            if (inProgress)
+            {
                 return;
             }
             inProgress = true;
@@ -29,15 +34,16 @@ namespace eu.sig.training.ch02 {
         // end::extractMethodStart[]
 
         // tag::updateObservers[]
-        public void UpdateObservers() {
+        public void UpdateObservers()
+        {
             UpdateObserversPlayerDied();
             UpdateObserversPelletsEaten();
         }
         // end::updateObservers[]
 
-        private void UpdateObserversPlayerDied() {}
+        private void UpdateObserversPlayerDied() { }
 
-        private void UpdateObserversPelletsEaten() {}
+        private void UpdateObserversPelletsEaten() { }
 
     }
 

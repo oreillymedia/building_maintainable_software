@@ -1,17 +1,18 @@
 using System.Drawing;
 using System.Collections.Generic;
 
-using eu.sig.training.ch03;
+namespace eu.sig.training.ch03
+{
 
-namespace eu.sig.training.ch03 {
-
-    public class FlagFactoryWithMap {
+    public class FlagFactoryWithMap
+    {
 
         // tag::getFlag[]
         private static Dictionary<Nationality, IList<Color>> FLAGS =
             new Dictionary<Nationality, IList<Color>>();
 
-        static FlagFactoryWithMap() {
+        static FlagFactoryWithMap()
+        {
             FLAGS[Nationality.DUTCH] = new List<Color>{ Color.Red, Color.White,
                 Color.Blue };
             FLAGS[Nationality.GERMAN] = new List<Color>{ Color.Black, Color.Red,
@@ -24,9 +25,10 @@ namespace eu.sig.training.ch03 {
                 Color.Red };
         }
 
-        public IList<Color> GetFlagColors(Nationality nationality) {
+        public IList<Color> GetFlagColors(Nationality nationality)
+        {
             IList<Color> colors = FLAGS[nationality];
-            return colors ?? new List<Color>{ Color.Gray };
+            return colors ?? new List<Color> { Color.Gray };
         }
         // end::getFlag[]
     }

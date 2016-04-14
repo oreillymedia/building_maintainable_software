@@ -3,12 +3,15 @@ using System.Drawing;
 using eu.sig.training.ch06.simpledigitalcamera;
 using Moq;
 
-namespace eu.sig.training.ch10 {
+namespace eu.sig.training.ch10
+{
     [TestFixture]
-    public class PerfectPictureMoqTest {
+    public class PerfectPictureMoqTest
+    {
         // tag::testNightPictureMockito[]
         [Test]
-        public void TestNightPictureMoq() {
+        public void TestNightPictureMoq()
+        {
             Image image =
                 Image.FromFile("../../../../test/resources/VanGoghStarryNight.jpg");
             var cameraMock = new Mock<ISimpleDigitalCamera>();

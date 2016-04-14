@@ -1,9 +1,9 @@
-﻿using System;
-
-namespace eu.sig.training.ch04
+﻿namespace eu.sig.training.ch04
 {
-    public class Money {
-        public bool GreaterThan(int limit) {
+    public class Money
+    {
+        public bool GreaterThan(int limit)
+        {
             return true;
         }
     }

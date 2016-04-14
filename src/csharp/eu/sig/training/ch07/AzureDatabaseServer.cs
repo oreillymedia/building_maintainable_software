@@ -1,6 +1,6 @@
-﻿using System;
-
-namespace eu.sig.training.ch07 {
-    public class AzureDatabaseServer : ICloudServer {
+﻿namespace eu.sig.training.ch07
+{
+    public class AzureDatabaseServer : ICloudServer
+    {
     }
 }

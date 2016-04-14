@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace eu.sig.training.ch07 {
+﻿namespace eu.sig.training.ch07 {
     // tag::AzureCloudServerFactory[]
     public class AzureCloudServerFactory : ICloudServerFactory {
         public ICloudServer LaunchComputeServer() {
