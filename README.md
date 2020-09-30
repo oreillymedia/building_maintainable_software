@@ -25,3 +25,4 @@ For the Java code, there is a `pom.xml` file in the root of this repository. Thi
 For the C# code, there is a Visual Studio Solution file in the root of this repository, which references two projects (see the `.csproj` files in `src/csharp` and `src/test/csharp`). We compile the C# code and run the unit tests regularly using [Mono](http://www.mono-project.com) on MacOS and occasionally using Visual Studio.
 
 Both the Java and the C# editions have been written using O'Reilly's [Atlas](https://atlas.oreilly.com) platform in the [AsciiDoc](http://asciidoc.org) markup language. All code snippets displayed in the books are taken directly from this example code. The parts included in the books are between Java and C# comments of the form `// tag::NameOfTag[]` and `// end::NameOfTag[]`. All code not between such comments is just there to make everything compile and pass unit tests.
+# thanx for your visit
